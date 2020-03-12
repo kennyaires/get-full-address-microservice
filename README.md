@@ -1,2 +1,2 @@
 # get-full-address-microservice
-Microservice to get address details from postal code
+Microsserviço para consultar endereços a partir do CEP.
