@@ -9,7 +9,7 @@ api = Blueprint('api', __name__, url_prefix='/api')
 
 
 @api.route('/get-full-address/<postal_code>', methods=['GET'])
-@jwt_required
+#@jwt_required
 def get_full_address(postal_code):
     """Return a completete address for the give postal code"""
     from app.models.address import Address
