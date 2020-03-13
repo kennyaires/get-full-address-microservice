@@ -28,6 +28,7 @@ O app é escrito em python3 e configurado para ambiente virtual:
 ```
 virtualenv venv -p python3
 . venv/bin/activate
+pip install -r requirements.txt
 ```
 
 Uma vez dentro da venv, basta iniciar a aplicação, ela estará disponível na porta 5000:
