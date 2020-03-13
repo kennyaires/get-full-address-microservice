@@ -3,7 +3,7 @@ Microsserviço para consultar endereços a partir do CEP desenvolvida em Flask.
 
 ## Route
 
-https://get-full-address-microservice.herokuapp.com/api/get-full-address/<CEP>
+```https://get-full-address-microservice.herokuapp.com/api/get-full-address/<CEP>```
   - Requisição: GET
 
 Route chamada pelo serviço para a consulta de detalhes do endereço passando como argumento de URL o cep desejado.
