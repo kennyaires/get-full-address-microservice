@@ -1,5 +1,5 @@
 # get-full-address-microservice
-Microsserviço para consultar endereços a partir do CEP desnvolvida em Flask.
+Microsserviço para consultar endereços a partir do CEP desenvolvida em Flask.
 
 ## Route
 
