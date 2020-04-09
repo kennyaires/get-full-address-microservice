@@ -39,7 +39,7 @@ python main.py
 
 ## Scripts
 
-A versão do repositório utiliza um banco de dados sqlite já alimentado com dados de endereços disponibilizados pelos correios `ceps_raw.txt`, o script abaixo doi usado para a inicialização do banco de dados e pode ser utilizado para qualquer banco relacional suportado pela biblioteca SQLAlchemy para python. 
+A versão do repositório utiliza um banco de dados sqlite já alimentado com dados de endereços disponibilizados pelos correios `ceps_raw.txt`, o script abaixo foi usado para a inicialização do banco de dados e pode ser utilizado para qualquer banco relacional suportado pela biblioteca SQLAlchemy para python. 
 ```python script_seed_db.py```
 
 Por questões de simplicidade na demonstração, o app feito no deploy está com a opção de autorização por token desabilitada, porém o app está estruturado para isso, para habilitar a função apenas desmarcamos o decorator na route da api em `get-full-address-microservice/app/views/api.py` na linha 12:
