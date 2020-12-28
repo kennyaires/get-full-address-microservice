@@ -3,6 +3,9 @@ Microsserviço para consultar endereços a partir do CEP desenvolvida em Flask.
 
 ## Route
 
+A aplicação suporta requisições no modelo API REST ou GraphQL.
+
+# REST
 ```https://get-full-address-microservice.herokuapp.com/api/get-full-address/<CEP>```
   - Requisição: GET
 
@@ -22,6 +25,56 @@ Exemplo de requisição
 }
 ```
 
+# GraphQL
+```https://get-full-address-microservice.herokuapp.com/graphql?query={
+  search(q: "<CEP>"){
+    __typename
+    ... on Address {
+      	address
+      	neighborhood
+      	city
+      	state
+    }
+  }
+}
+```
+  - Requisição: GET
+
+Route chamada pelo serviço para a consulta de detalhes do endereço usando o modelo de requisição GraphQL. Podemos buscar informações usando o CEP - `postalCode` - ou o nome da rua - `address`.
+
+Exemplo de requisição
+
+```
+/graphql?query={
+  search(q: "09780220"){
+    __typename
+    ... on Address {
+      	address
+      	neighborhood
+      	city
+      	state
+    }
+  }
+}
+```
+- Resposta: (content-type application/json)
+```
+{
+  "data": {
+    "search": [
+      {
+        "__typename": "Address",
+        "address": "Rua Papa Paulo VI (Jd Yrajá)",
+        "neighborhood": "Santa Terezinha",
+        "city": "São Bernardo do Campo",
+        "state": "SP"
+      }
+    ]
+  }
+}
+```
+
+```
 ## Iniciando app local
 
 O app é escrito em python3 e configurado para ambiente virtual:
