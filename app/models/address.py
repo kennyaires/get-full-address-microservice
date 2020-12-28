@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
-from main import create_app
 
-db = SQLAlchemy(create_app())
+db = SQLAlchemy()
 
 
 class Address(db.Model):
