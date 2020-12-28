@@ -9,6 +9,8 @@ verify_ssl = true
 flask = "*"
 flask_sqlalchemy = "*"
 flask_jwt_extended = "*"
+flask_graphql = "*"
+graphene_sqlalchemy = "*"
 
 [requires]
 
