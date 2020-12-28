@@ -5,7 +5,7 @@ Microsserviço para consultar endereços a partir do CEP desenvolvida em Flask.
 
 A aplicação suporta requisições no modelo API REST ou GraphQL.
 
-# REST
+### REST
 ```https://get-full-address-microservice.herokuapp.com/api/get-full-address/<CEP>```
   - Requisição: GET
 
@@ -25,7 +25,7 @@ Exemplo de requisição
 }
 ```
 
-# GraphQL
+### GraphQL
 ```https://get-full-address-microservice.herokuapp.com/graphql?query={
   search(q: "<CEP>"){
     __typename
@@ -74,7 +74,6 @@ Exemplo de requisição
 }
 ```
 
-```
 ## Iniciando app local
 
 O app é escrito em python3 e configurado para ambiente virtual:
